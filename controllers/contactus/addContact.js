@@ -1,6 +1,6 @@
 const Contact = require("../../models/contact");
 
-const createContact = async (req, res, next) => {
+const createContact = async (req, res) => {
   try {
     const { userName, phoneNumber, email } = req.body;
 
