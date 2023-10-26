@@ -3,7 +3,7 @@ const Contact = require("../../models/contact");
 const createContact = async (req, res, next) => {
   try {
     const { userName, phoneNumber, email } = req.body;
-    console.log(userName);
+
     if (!userName || !phoneNumber)
       return res.status(403).json({
         message: "Invalid username or phoneNumber",
