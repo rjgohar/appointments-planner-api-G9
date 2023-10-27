@@ -2,11 +2,13 @@ const express = require("express");
 const app = express();
 const dotenv = require("dotenv");
 const router = require("./routes");
+const cors = require("cors");
 dotenv.config({});
 //db.config
 require("./config/db");
 const port = process.env.PORT || 8000;
 app.use(express.static("public"));
+app.use(cors("*"));
 const logger = require("morgan");
 app.use(logger("dev"));
 app.use(express.json());
