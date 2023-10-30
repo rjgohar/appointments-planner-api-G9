@@ -6,7 +6,7 @@ const {
 } = require("../controllers/contactus/index");
 
 // api/contacts/
-contactRouter.post("/", createContact);
+contactRouter.post("/create", createContact);
 contactRouter.get("/get-all", getContacts);
 
 module.exports = contactRouter;
